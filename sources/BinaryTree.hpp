@@ -230,9 +230,11 @@ namespace ariel
         
         //-----------Iterator class------------
         class iterator{
+            
         public:
             Node *current_node = nullptr;
-
+            
+            //Initilized the queue inorder way
             void init_inorder_queue(queue<Node *> &queue, Node *root)
             {
 
@@ -254,6 +256,7 @@ namespace ariel
                 }
             };
             
+            //Initilized the queue postorder way
             void init_postorder_queue(queue<Node *> &queue, Node *root)
             {
                 if (root == nullptr)
@@ -273,6 +276,7 @@ namespace ariel
                 queue.push(root);
             };
            
+            //Initilized the queue preorder way
             void init_preorder_queue(queue<Node *> &queue, Node *root)
             {
                 if (root == nullptr)
